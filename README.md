@@ -2,7 +2,7 @@
   <img align="center" src=".github/images/unicorn-pi.png" />
   <h2 align="center">Unicorn-Pi</h2>
   <p align="center">
-    A simple guide to setting up a Raspberry Pi Pico with the Pimoroni Unicorn Pack, including the best LED effects and animations!
+    A software suite of the best LED effects and animations for the Raspberry Pi Pico with the Pimoroni Unicorn Pack. The scripts are written in Python and are designed to be easy to use, modify, and test individually.
   </p>
 </div>
 
