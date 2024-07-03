@@ -2,7 +2,13 @@
   <img align="center" src=".github/images/unicorn-pi.png" />
   <h2 align="center">Unicorn-Pi</h2>
   <p align="center">
-    A software suite of the best LED effects and animations for the Raspberry Pi Pico with the Pimoroni Unicorn Pack. The scripts are written in Python and are designed to be easy to use, modify, and test individually.
+    A software suite of the best LED effects and animations for the Raspberry Pi Pico with the Pimoroni Unicorn Pack.
+  </p>
+  <p align="center">
+    The scripts used in this software are written in Python and are designed to be easy to use, individually modify, and test. Changing to the next or previous view is as simple as pressing the "A" or "X" button on the Unicorn Pack, and the previously selected view will always be saved and loaded on every reboot.
+  </p>
+  <p align="center">
+    Suggestions for new effects or animations are always welcome, & thank you for checking out this project!
   </p>
 </div>
 
