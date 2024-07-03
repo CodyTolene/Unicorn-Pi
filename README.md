@@ -57,6 +57,8 @@
 | Warp Speed        | ![Warp Speed](.github/images/examples/warp-speed.gif)             |
 | Wave              | ![Wave](.github/images/examples/wave.gif)                         |
 
+Have another idea? Share it [here][url-new-issue]. You can also fork this repo and submit a pull request with your own effect or animation! I'd love to see what you come up with.
+
 <p align="right">[ <a href="#index">Index</a> ]</p>
 
 <!---------------------------------------------------------------------------->
