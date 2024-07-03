@@ -10,7 +10,8 @@
 
 - [Parts List](#parts-list)
 - [Previews](#previews)
-- [Setup](#setup)
+- [Software Setup](#software-setup)
+- [Software Guide](#software-guide)
 - [Licensing](#licensing)
 - [Wrapping Up](#wrapping-up)
 
@@ -35,7 +36,7 @@
 
 ## Previews <a name="previews"></a>
 
-| Name                                                        | Preview |
+| Name              | Preview |
 | :---------------- | :---------------------------------------------------------------- |
 | Digital Clock     | ![Digital Clock](.github/images/examples/digital-clock.gif)       |
 | Digital Rain      | ![Digital Rain](.github/images/examples/digital-rain.gif)         |
@@ -62,9 +63,43 @@
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 
-## Setup <a name="setup"></a>
+## Software Setup <a name="software-setup"></a>
 
-...
+First make sure you have this repo cloned to your computer. If you don't have Git installed, you can download the repo as a ZIP file by clicking the green "Code" button at the top of this page. Follow the steps below to run the Python scripts in this repository on your Raspberry Pi Pico with the Pimoroni Unicorn Pack:
+
+1. Install the Pimoroni custom software to your Raspberry Pi Pico by following the [official guide][url-pimoroni-pico-guide].
+2. Download and install the Thonny IDE from the [official website][url-thonny]. 
+   > ![Info][img-info] This allows us to write and run Python code on the Raspberry Pi Pico.
+3. Open Thonny and connect your Raspberry Pi Pico to your computer using a USB cable.
+4. On the left hand side you should see the file explorer for your Raspberry Pi Pico. Drag and drop the Python scripts from this repository into the file explorer, with `main.py` being at the top/root directory.
+5. Unplug and replug your Raspberry Pi Pico to restart the device.
+
+The file `main.py` will automatically run when the Raspberry Pi Pico is powered on.
+
+<p align="right">[ <a href="#index">Index</a> ]</p>
+
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+
+## Software Guide <a name="software-guide"></a>
+
+Button layout
+
+```bash
+|==================================|
+| (A) oooooooooooooooooooooooo (X) |
+|     oooooooooooooooooooooooo     |
+| (B) oooooooooooooooooooooooo (Y) |
+|==================================|
+```
+
+| Button | Action          |
+| :----- | :-------------- |
+| "A"    | Previous view.  |
+| "X"    | Next view.      |
+| "B"    | Nothing (yet).  |
+| "Y"    | Nothing (yet).  |
 
 <p align="right">[ <a href="#index">Index</a> ]</p>
 
@@ -112,6 +147,8 @@ Cody Tolene
 [url-btc]: https://explorer.btc.com/btc/address/bc1qfx3lvspkj0q077u3gnrnxqkqwyvcku2nml86wmudy7yf2u8edmqq0a5vnt
 [url-new-issue]: https://github.com/CodyTolene/Unicorn-Pi/issues/new
 [url-pi-pico]: https://www.raspberrypi.org/products/raspberry-pi-pico/
+[url-pimoroni-pico-guide]: https://learn.pimoroni.com/tutorial/pico/getting-started-with-pico
+[url-thonny]: https://thonny.org/
 [url-unicorn-pack]: https://shop.pimoroni.com/products/pico-unicorn-pack
 
 <!---------------------------------------------------------------------------->
