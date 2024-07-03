@@ -73,7 +73,7 @@ First make sure you have this repo cloned to your computer. If you don't have Gi
 2. Download and install the Thonny IDE from the [official website][url-thonny]. 
    > ![Info][img-info] This allows us to write and run Python code on the Raspberry Pi Pico.
 3. Open Thonny and connect your Raspberry Pi Pico to your computer using a USB cable.
-4. On the left hand side you should see the file explorer for your Raspberry Pi Pico. Drag and drop the Python scripts from this repository into the file explorer, with `main.py` being at the top/root directory.
+4. On the left hand side you should see the file explorer for your Raspberry Pi Pico. Drag and drop all the files from the `scripts` folder in this repository to the root directory of your Raspberry Pi Pico.
 5. Unplug and replug your Raspberry Pi Pico to restart the device.
 
 The file `main.py` will automatically run when the Raspberry Pi Pico is powered on.
