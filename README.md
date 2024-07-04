@@ -12,6 +12,8 @@
   </p>
 </div>
 
+[![Python Linting](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml/badge.svg)](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml)
+
 ## Index <a name="index"></a>
 
 - [Parts List](#parts-list)
