@@ -5,8 +5,6 @@ import uasyncio
 
 
 async def run(picoUnicorn, graphics):
-    width = picoUnicorn.get_width()
-    height = picoUnicorn.get_height()
     white = graphics.create_pen(255, 255, 255)
 
     while True:

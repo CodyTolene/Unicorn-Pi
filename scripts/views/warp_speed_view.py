@@ -1,7 +1,6 @@
 # Cody Tolene
 # Apache License 2.0
 
-import time
 import random
 import uasyncio
 

@@ -131,6 +131,10 @@ pre_commit install
 pre_commit autoupdate
 ```
 
+> [Info][img-info] To run the formatter explicitly, use `py -m black scripts\`
+
+> [Info][img-info] To run the linter explicitly, use `py -m flake8 --show-source --ignore E501,W503 scripts\`
+
 3. Make your changes, test using Thonny.
 
 4. Run the linting and formatting tools:
