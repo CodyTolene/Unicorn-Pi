@@ -131,9 +131,9 @@ pre_commit install
 pre_commit autoupdate
 ```
 
-> [Info][img-info] To run the formatter explicitly, use `python3 -m black scripts/`
+> ![Info][img-info] To run the formatter explicitly, use `python3 -m black scripts/`
 
-> [Info][img-info] To run the linter explicitly, use `python3 -m flake8 --show-source --ignore E501 scripts/`
+> ![Info][img-info] To run the linter explicitly, use `python3 -m flake8 --show-source --ignore E501 scripts/`
 
 3. Make your changes, test using Thonny.
 
