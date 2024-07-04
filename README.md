@@ -40,7 +40,7 @@
 
 | Part                                      | Price (USD) |
 | :---------------------------------------- | :---------- |
-| [Raspberry Pi Pico][url-pi-pico]          | $15.00      |
+| [Raspberry Pi Pico][url-pi-pico]          | $5.00       |
 | [Pimoroni Unicorn Pack][url-unicorn-pack] | $24.00      |
 
 <p align="right">[ <a href="#index">Index</a> ]</p>
