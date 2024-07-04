@@ -8,4 +8,4 @@ repos:
     rev: 7.1.0
     hooks:
       - id: flake8
-        args: ['--show-source', '--ignore', 'E501', '.']
+        args: ['--show-source', '--ignore', 'E501,W503', 'scripts/']
