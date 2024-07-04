@@ -4,8 +4,11 @@
 import uasyncio
 from utils.view_manager import switch_view
 
+
 # Button listener process
-async def buttonListenerProcess(views, picoUnicorn, graphics, currentViewKey, currentViewTask):
+async def buttonListenerProcess(
+    views, picoUnicorn, graphics, currentViewKey, currentViewTask
+):
     buttonAState = False
     buttonXState = False
 
@@ -19,10 +22,7 @@ async def buttonListenerProcess(views, picoUnicorn, graphics, currentViewKey, cu
                 current_index = view_keys.index(currentViewKey)
                 currentViewKey = view_keys[(current_index - 1) % len(view_keys)]
                 currentViewTask = await switch_view(
-                    views, 
-                    currentViewKey, 
-                    currentViewTask, 
-                    picoUnicorn, graphics
+                    views, currentViewKey, currentViewTask, picoUnicorn, graphics
                 )
         else:
             buttonAState = False
@@ -34,11 +34,7 @@ async def buttonListenerProcess(views, picoUnicorn, graphics, currentViewKey, cu
                 current_index = view_keys.index(currentViewKey)
                 currentViewKey = view_keys[(current_index + 1) % len(view_keys)]
                 currentViewTask = await switch_view(
-                    views, 
-                    currentViewKey, 
-                    currentViewTask, 
-                    picoUnicorn, 
-                    graphics
+                    views, currentViewKey, currentViewTask, picoUnicorn, graphics
                 )
         else:
             buttonXState = False

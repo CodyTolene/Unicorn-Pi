@@ -3,15 +3,15 @@
 
 import uasyncio
 import json
-import uos as os
-from collections import OrderedDict
 
 VIEW_INDEX_FILE = "/current_view.json"
+
 
 # Save the current view index to a file
 def save_current_view_index(key):
     with open(VIEW_INDEX_FILE, "w") as f:
         json.dump({"current_view_key": key}, f)
+
 
 # Load the current view index from a file
 def load_current_view_index():
@@ -22,6 +22,7 @@ def load_current_view_index():
     except OSError:
         return "Rainbow"
 
+
 # Switch to the current view
 async def switch_view(views, currentViewKey, currentViewTask, picoUnicorn, graphics):
     if currentViewTask:
@@ -30,13 +31,11 @@ async def switch_view(views, currentViewKey, currentViewTask, picoUnicorn, graph
             await currentViewTask
         except uasyncio.CancelledError:
             pass
-    
+
     # Clear the screen
     graphics.set_pen(0)  # Black
     graphics.clear()
     picoUnicorn.update(graphics)
     save_current_view_index(currentViewKey)
-    currentViewTask = uasyncio.create_task(
-        views[currentViewKey](picoUnicorn, graphics)
-    )
+    currentViewTask = uasyncio.create_task(views[currentViewKey](picoUnicorn, graphics))
     return currentViewTask

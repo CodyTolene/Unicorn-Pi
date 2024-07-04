@@ -1,17 +1,19 @@
 # MIT License
 # https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/examples/pico_unicorn/vertical-fire.py
 
-import time
 import random
 import micropython
 import uasyncio
 
+
 async def run(picoUnicorn, graphics):
-    fire_colours = [graphics.create_pen(0, 0, 0),
-                    graphics.create_pen(20, 20, 20),
-                    graphics.create_pen(180, 30, 0),
-                    graphics.create_pen(220, 160, 0),
-                    graphics.create_pen(255, 255, 180)]
+    fire_colours = [
+        graphics.create_pen(0, 0, 0),
+        graphics.create_pen(20, 20, 20),
+        graphics.create_pen(180, 30, 0),
+        graphics.create_pen(220, 160, 0),
+        graphics.create_pen(255, 255, 180),
+    ]
 
     width = picoUnicorn.get_height() + 2
     height = picoUnicorn.get_width() + 4
@@ -42,7 +44,12 @@ async def run(picoUnicorn, graphics):
         factor = damping_factor / 5.0
         for y in range(0, height - 2):
             for x in range(1, width - 1):
-                _heat[x][y] += _heat[x][y + 1] + _heat[x][y + 2] + _heat[x - 1][y + 1] + _heat[x + 1][y + 1]
+                sum_heat_y1 = _heat[x][y + 1]
+                sum_heat_y2 = _heat[x][y + 2]
+                sum_heat_x1y1 = _heat[x - 1][y + 1]
+                sum_heat_x2y1 = _heat[x + 1][y + 1]
+
+                _heat[x][y] += sum_heat_y1 + sum_heat_y2 + sum_heat_x1y1 + sum_heat_x2y1
                 _heat[x][y] *= factor
 
     @micropython.native  # noqa: F821
@@ -77,10 +84,12 @@ async def run(picoUnicorn, graphics):
         draw()
         await uasyncio.sleep(1.0 / 60)
 
+
 # This section of code is only for testing.
 if __name__ == "__main__":
     from picounicorn import PicoUnicorn
     from picographics import PicoGraphics, DISPLAY_UNICORN_PACK
+
     picoUnicorn = PicoUnicorn()
     graphics = PicoGraphics(display=DISPLAY_UNICORN_PACK)
     uasyncio.run(run(picoUnicorn, graphics))

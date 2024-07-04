@@ -18,6 +18,7 @@
 - [Previews](#previews)
 - [Software Setup](#software-setup)
 - [Software Guide](#software-guide)
+- [Development](#development)
 - [Licensing](#licensing)
 - [Wrapping Up](#wrapping-up)
 
@@ -115,6 +116,44 @@ Button layout
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 
+## Development <a name="development"></a>
+
+1. Make sure you have Python installed on your computer (3.8+). You can download Python from the [official website][url-python-downloads]. 
+
+2. Run the following in a terminal at the root of this repository to install development dependencies:
+
+```bash
+# Install the required packages
+python3 -m pip install -r requirements.txt
+# Install the pre-commit hooks
+pre_commit install
+# Update the pre-commit hooks
+pre_commit autoupdate
+```
+
+> [Info][img-info] To run the formatter explicitly, use `python3 -m black scripts/`
+
+> [Info][img-info] To run the linter explicitly, use `python3 -m flake8 --show-source --ignore E501 scripts/`
+
+3. Make your changes, test using Thonny.
+
+4. Run the linting and formatting tools:
+
+```bash
+# Linting
+python3 -m flake8 --show-source --ignore E501 .
+# Formatting
+python3 -m black .
+```
+
+5. Submit a pull request with your changes.
+
+<p align="right">[ <a href="#index">Index</a> ]</p>
+
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+
 ## Licensing <a name="licensing"></a>
 
 This project is licensed under the Apache License, Version 2.0. See the [APACHE_2_LICENSE](LICENSE) file for the pertaining license text.
@@ -156,6 +195,7 @@ Cody Tolene
 [url-new-issue]: https://github.com/CodyTolene/Unicorn-Pi/issues/new
 [url-pi-pico]: https://www.raspberrypi.org/products/raspberry-pi-pico/
 [url-pimoroni-pico-guide]: https://learn.pimoroni.com/tutorial/pico/getting-started-with-pico
+[url-python-downloads]: https://www.python.org/downloads/
 [url-thonny]: https://thonny.org/
 [url-unicorn-pack]: https://shop.pimoroni.com/products/pico-unicorn-pack
 
