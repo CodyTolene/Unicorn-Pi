@@ -1,21 +1,17 @@
 <div align="center">
   <img align="center" src=".github/images/unicorn-pi.png" />
-  <h2 align="center">Unicorn-Pi</h2>
+  <h1 align="center">Unicorn-Pi</h1>
   <p align="center">
-    A software suite of the best LED effects and animations for the Raspberry Pi Pico with the Pimoroni Unicorn Pack.
+    A software suite of the best LED effects and animations for the Raspberry Pi Pico with the Pimoroni Unicorn Pack. Changing to the next or previous view is as simple as pressing the "A" or "X" button on the Unicorn Pack, and the previously selected view will always be saved and loaded on every reboot.
   </p>
   <p align="center">
-    The scripts used in this software are written in Python and are designed to be easy to use, individually modify, and test. Changing to the next or previous view is as simple as pressing the "A" or "X" button on the Unicorn Pack, and the previously selected view will always be saved and loaded on every reboot.
-  </p>
-  <p align="center">
-    Suggestions for new effects or animations are always welcome, & thank you for checking out this project!
+    The scripts used in this software are written in Python and are designed to be easy to use, individually modify, and test. Suggestions for new effects or animations are always welcome, & thank you for checking out this project!
   </p>
 </div>
 
-[![Python Linting](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml/badge.svg)](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml)
-
 ## Index <a name="index"></a>
 
+- [Build Status](#build-status)
 - [Parts List](#parts-list)
 - [Previews](#previews)
 - [Software Setup](#software-setup)
@@ -23,6 +19,16 @@
 - [Development](#development)
 - [Licensing](#licensing)
 - [Wrapping Up](#wrapping-up)
+
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+
+## Build Status <a name="build-status"></a>
+
+[![Python Linting](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml/badge.svg)](https://github.com/CodyTolene/Unicorn-Pi/actions/workflows/lint.yml)
+
+<p align="right">[ <a href="#index">Index</a> ]</p>
 
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
