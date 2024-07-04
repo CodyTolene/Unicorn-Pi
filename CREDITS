@@ -7,9 +7,3 @@ This project includes third-party code from the following sources:
     URL: https://github.com/pimoroni/pimoroni-pico
     Licensed under the MIT License
     Description: Libraries and examples to support Pimoroni Pico add-ons in C++ and MicroPython.
-   
-2.  Project Name: picoplasma
-    Author: signheim
-    URL: https://github.com/signheim/picoplasma
-    Licensed under the MIT License
-    Description: Plasma Generator with scrolling text for Raspberry Pi Pico with Pimoroni Unicorn Pack.
