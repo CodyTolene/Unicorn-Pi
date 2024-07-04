@@ -134,27 +134,27 @@ Button layout
 # Install the required packages
 python3 -m pip install -r requirements.txt
 # Install the pre-commit hooks
-pre_commit install
+pre-commit install
 # Update the pre-commit hooks
-pre_commit autoupdate
+pre-commit autoupdate
 ```
 
-> ![Info][img-info] To run the formatter explicitly, use `python3 -m black scripts/`
+3. Make your code changes using Thonny, add new views, fix a bug, etc.
 
-> ![Info][img-info] To run the linter explicitly, use `python3 -m flake8 --show-source --ignore E501 scripts/`
+4. Test using Thonny by connecting your Raspberry Pi Pico to your computer. Run the `main.py` script or any view script individually by pressing the "Run" button with the file open.
 
-3. Make your changes, test using Thonny.
-
-4. Run the linting and formatting tools:
+5. When your changes are in you can optionally run the following commands to lint and format your code:
 
 ```bash
-# Linting
-python3 -m flake8 --show-source --ignore E501 .
-# Formatting
-python3 -m black .
+# Format
+python3 -m black scripts/
+# Lint
+python3 -m flake8 --show-source --ignore E501 scripts/
 ```
 
-5. Submit a pull request with your changes.
+> ![Info][img-info] These scripts will also run automatically when you commit changes (pre-commit hooks) to ensure code quality.
+
+6. Submit a pull request with your changes.
 
 <p align="right">[ <a href="#index">Index</a> ]</p>
 
