@@ -44,12 +44,12 @@ async def run(picoUnicorn, graphics):
         factor = damping_factor / 5.0
         for y in range(0, height - 2):
             for x in range(1, width - 1):
-                _heat[x][y] += (
-                    _heat[x][y + 1]
-                    + _heat[x][y + 2]
-                    + _heat[x - 1][y + 1]
-                    + _heat[x + 1][y + 1]
-                )
+                sum_heat_y1 = _heat[x][y + 1]
+                sum_heat_y2 = _heat[x][y + 2]
+                sum_heat_x1y1 = _heat[x - 1][y + 1]
+                sum_heat_x2y1 = _heat[x + 1][y + 1]
+
+                _heat[x][y] += sum_heat_y1 + sum_heat_y2 + sum_heat_x1y1 + sum_heat_x2y1
                 _heat[x][y] *= factor
 
     @micropython.native  # noqa: F821

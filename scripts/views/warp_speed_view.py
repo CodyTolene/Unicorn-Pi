@@ -32,12 +32,9 @@ async def run(picoUnicorn, graphics):
             star["y"] += star["y"] * star["speed"]
 
             # Reset star if it goes out of bounds
-            if (
-                star["x"] > width // 2
-                or star["x"] < -width // 2
-                or star["y"] > height // 2
-                or star["y"] < -height // 2
-            ):
+            x_out_of_bounds = star["x"] > width // 2 or star["x"] < -width // 2
+            y_out_of_bounds = star["y"] > height // 2 or star["y"] < -height // 2
+            if x_out_of_bounds or y_out_of_bounds:
                 star["x"] = random.uniform(-width, width)
                 star["y"] = random.uniform(-height, height)
                 star["speed"] = random.uniform(0.01, 0.1)

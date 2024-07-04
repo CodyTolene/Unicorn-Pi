@@ -67,11 +67,12 @@ class Firework:
                         p["dy"] += 0.05  # Apply gravity effect
                         p["life"] -= 0.05  # Decrease life
 
+                        # Check if particle is within bounds
+                        width_in_bounds = 0 <= int(p["x"]) < self.width
+                        height_in_bounds = 0 <= int(p["y"]) < self.height
+
                         # Draw particle if within bounds
-                        if (
-                            0 <= int(p["x"]) < self.width
-                            and 0 <= int(p["y"]) < self.height
-                        ):
+                        if width_in_bounds and height_in_bounds:
                             brightness = int(255 * p["life"])
                             self.graphics.set_pen(
                                 self.graphics.create_pen(
@@ -102,12 +103,13 @@ async def run(picoUnicorn, graphics):
             await firework.update()
 
         # Remove fireworks that have completed their explosion
-        fireworks = [
-            firework
-            for firework in fireworks
-            if any(p["life"] > 0 for p in firework.particles)
-            or firework.stage == "launch"
-        ]
+        filtered_fireworks = []
+        for firework in fireworks:
+            has_life = any(p["life"] > 0 for p in firework.particles)
+            is_launching = firework.stage == "launch"
+            if has_life or is_launching:
+                filtered_fireworks.append(firework)
+        fireworks = filtered_fireworks
 
         # Update the display
         picoUnicorn.update(graphics)

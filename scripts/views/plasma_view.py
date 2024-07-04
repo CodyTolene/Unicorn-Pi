@@ -15,10 +15,11 @@ async def run(picoUnicorn, graphics):
         for y in range(height):
             for x in range(width):
                 # Calculate the color based on sine and cosine functions
-                color = int(
-                    (math.sin(x / width * 8 + t) + math.cos(y / height * 8 + t)) * 127.5
-                    + 127.5
-                )
+                sine_component = math.sin(x / width * 8 + t)
+                cosine_component = math.cos(y / height * 8 + t)
+                color_value = (sine_component + cosine_component) * 127.5
+                color = int(color_value + 127.5)
+
                 # Set the pen to the calculated color
                 graphics.set_pen(graphics.create_pen(color, 0, 255 - color))
                 # Draw the pixel at (x, y) with the current pen color

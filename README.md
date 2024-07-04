@@ -124,16 +124,16 @@ Button layout
 
 ```bash
 # Install the required packages
-py -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 # Install the pre-commit hooks
 pre_commit install
 # Update the pre-commit hooks
 pre_commit autoupdate
 ```
 
-> [Info][img-info] To run the formatter explicitly, use `py -m black scripts\`
+> [Info][img-info] To run the formatter explicitly, use `python3 -m black scripts/`
 
-> [Info][img-info] To run the linter explicitly, use `py -m flake8 --show-source --ignore E501 scripts\`
+> [Info][img-info] To run the linter explicitly, use `python3 -m flake8 --show-source --ignore E501 scripts/`
 
 3. Make your changes, test using Thonny.
 
@@ -141,9 +141,9 @@ pre_commit autoupdate
 
 ```bash
 # Linting
-py -m flake8 --show-source --ignore E501 .
+python3 -m flake8 --show-source --ignore E501 .
 # Formatting
-py -m black .
+python3 -m black .
 ```
 
 5. Submit a pull request with your changes.
